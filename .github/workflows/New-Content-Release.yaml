@@ -18,6 +18,10 @@ jobs:
           repository: actionquake/distrib
           path: ${{ env.DIST_DIR }}
 
+      - name: Adjust timestamps
+        working-directory: ${{ env.DIST_DIR }}
+        run: python ${{ env.DIST_DIR }}/scripts/git-tools/git-restore-mtime
+
       - name: Zip game content to pkz
         working-directory: ${{ env.DIST_DIR }}/baseaq
         run: |
