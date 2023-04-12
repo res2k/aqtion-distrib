@@ -18,7 +18,6 @@ jobs:
       - name: Checkout distrib
         uses: actions/checkout@v3
         with:
-          repository: actionquake/distrib
           path: ${{ env.DIST_DIR }}
 
       - name: Fetch additional history
