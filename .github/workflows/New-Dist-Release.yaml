@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: ${{ env.DIST_DIR }}
+          submodules: true
 
       - name: Generate directory structure
         run: |
